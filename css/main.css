@@ -1,0 +1,723 @@
+/* ==============================
+ ==== Main Body Styling =========
+================================*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/**
+ * ========================================
+ * animation kenburns-top
+ * ========================================
+ */
+
+@-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(0.7) translateY(0);
+    transform: scale(0.7) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-15px);
+    transform: scale(1) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(0.7) translateY(0);
+    transform: scale(0.7) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-15px);
+    transform: scale(1) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+
+/* ================================
+============= End Ken_Burns =======
+================================= */
+
+/* ==============================================
+===== Navbar Styling ============================
+=============================================== */
+
+/* Remove margins and padding from the list */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Lato, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  background-color: rgba(53, 53, 53, 0.7);
+  height: 10%;
+  margin: 0;
+  padding: 0;
+}
+
+nav.fill ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+
+nav.fill ul li a:hover {
+  color: #9f6b3f;
+  z-index: 1;
+}
+
+/* Remove margins and padding from the list */
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Float the list items side by side */
+
+ul.topnav li {
+  float: right;
+  margin: 15px 20px;
+}
+
+/* Style the links inside the list items */
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  font-family: Alice, sans-serif;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 1s;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Change background color of links on hover
+ul.topnav li:not(:first-child) a:hover {
+    background-color: #9f6b3f;
+}*/
+
+.divMenu {
+  margin: 55px 15px;
+}
+
+#myTopNav {
+  display: flex;
+  /* flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end; */
+  margin: 45px 10px;
+}
+
+img[src="img/menuFilled.png"] {
+  margin: 15px 5px;
+  background-color: snow;
+}
+
+.initials {
+  margin: 45px 15px;
+}
+
+.navName {
+  margin-top: 25px;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+
+ul.topnav li.icon {
+  display: none;
+}
+
+a:link {
+  color: antiquewhite;
+}
+
+a:visited {
+  color: #d3d3d3;
+}
+
+/*===================================
+My Name Transition Effect CSS
+===================================*/
+
+nav .navName span {
+  opacity: 0;
+  transition: opacity 1400ms;
+  font-size: 1.6rem;
+  letter-spacing: 0.4rem;
+}
+
+nav .navName span:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+nav .navName span:nth-child(2) {
+  transition-delay: 1300ms;
+}
+
+nav .navName span:nth-child(3) {
+  transition-delay: 900ms;
+}
+
+nav .navName span:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+nav .navName span:nth-child(5) {
+  transition-delay: 800ms;
+}
+
+nav .navName span:nth-child(6) {
+  transition-delay: 700ms;
+}
+
+nav .navName span:nth-child(7) {
+  transition-delay: 500ms;
+}
+
+nav .navName span:nth-child(8) {
+  transition-delay: 1000ms;
+}
+
+nav .navName span:nth-child(9) {
+  transition-delay: 800ms;
+}
+
+nav .navName span:nth-child(10) {
+  transition-delay: 150ms;
+}
+
+nav .navName span:nth-child(11) {
+  transition-delay: 50ms;
+}
+
+nav:hover .navName span {
+  opacity: 1;
+}
+
+/* ============================
+=== End Navbar Stylings ======
+============================= */
+
+/* =================================================
+====== Section,Paragraph, & Main Title Stylings ==== 
+================================================= */
+
+section {
+  margin-top: 5px;
+  margin-left: 10%;
+  width: 80%;
+  padding: 15px 20px;
+}
+
+#main_title {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 52px;
+  color: #9f6b3f;
+  margin-top: 120px;
+  text-align: center;
+  height: auto;
+}
+
+pre {
+  top: 35%;
+  overflow: hidden;
+  white-space: pre-line;
+}
+
+#main_title img {
+  width: 10vw;
+  max-width: 15vw;
+  top: 90px;
+  opacity: 0.6;
+  margin: auto;
+  z-index: -1;
+}
+
+p {
+  font-family: Alice, serif;
+  font-size: 22px;
+  color: azure;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2em;
+  text-indent: 50px;
+}
+
+p.intro {
+  font-size: 26px;
+  line-height: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+p.intro:first-child:first-letter {
+  float: left;
+  color: #9f6b3f;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-left: 3px;
+  font-family: Georgia;
+}
+
+section p:first-child {
+  text-indent: 0px;
+}
+
+section p:first-child:first-letter {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+main {
+  overflow: auto;
+  padding-bottom: 12vh;
+  /* must be same height as the footer */
+}
+
+hr.hr_style {
+  border-style: solid;
+  border-color: #9f6b3f;
+  border-width: 3px 0 0 0;
+  border-radius: 20px;
+}
+
+hr.hr_style:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #9f6b3f;
+  border-width: 0 0 3px 0;
+  border-radius: 20px;
+}
+
+span {
+  font-family: Alice, sans-serif;
+  font-size: 1.4em;
+  color: #d3d3d3;
+}
+
+span#initials {
+  background-color: #9f6b3f;
+  color: #d3d3d3;
+  margin-left: 25px;
+  font-size: 2.2em;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+span.section_header {
+  position: absolute;
+  left: 44%;
+  bottom: 53%;
+  font-size: 46px;
+  color: #9f6b3f;
+}
+
+.myName {
+  font-size: 0.6em;
+}
+
+/* ========= End Main Title,Paragragh etc Stylings ============= */
+
+/* ======== Styling for Masonry Layout  ======================== */
+
+.grid-layout {
+  column-count: 3;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  opacity: 0.6;
+  transition: opacity 0.3s linear;
+}
+
+figure:hover {
+  opacity: 1;
+}
+
+figure > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+figure a,
+figure a:visited {
+  color: black;
+  text-decoration: none;
+  cursor:default;
+}
+
+figcaption {
+  grid-row: 2;
+  grid-column: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.2em 0.5em;
+  justify-self: start;
+}
+
+/* ========= End Masonry Stylings ====================== */
+
+/* ==== Styling for the Contact and Form area  ============== */
+
+#contact-area {
+  margin-bottom: 25px;
+}
+
+#contact-area input,
+#contact-area textarea {
+  padding: 5px;
+  width: 100%;
+  font-family: Alice, sans-serif;
+  font-size: 1.4em;
+  background-color: #d3d3c1;
+  margin: 0px 0px 10px 0px;
+  border: 2px solid #ccc;
+}
+
+#contact-area textarea:focus,
+#contact-area input:focus {
+  border: 2px solid #9f6b3f;
+}
+
+#contact-area input.submit-button:hover {
+  background: #9e5b24;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9e5b24 0%, #995423 66%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9e5b24),
+    color-stop(66%, #995423)
+  );
+  background: -o-linear-gradient(top, #9e5b24 0%, #995423 66%);
+  background: linear-gradient(to bottom, #9e5b24 0%, #995423 66%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#9e5b24', endColorstr='#995423', GradientType=0);
+  /* IE6-9 */
+}
+
+#contact-area input:focus {
+  border: 2px solid #9f6b3f;
+}
+
+#contact-area input.submit-button {
+  border: 2px solid black;
+  border-radius: 25px;
+  width: auto;
+  margin-top: 10px;
+  background: #9f6b3f;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #eab92d 0%, #9f6b3f 87%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#eab92d),
+    color-stop(87%, #9f6b3f)
+  );
+  background: -o-linear-gradient(top, #eab92d 0%, #9f6b3f 87%);
+  background: linear-gradient(to bottom, #eab92d 0%, #9f6b3f 87%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#9f6b3f', GradientType=0);
+  /* IE6-9 */
+}
+
+#contact_me {
+  font-family: Alice, serif;
+  font-size: 26px;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+  width: auto;
+  color: azure;
+  padding-top: 5px;
+  font-size: 1.4em;
+}
+
+/* ============================
+======Styling for Footer ======
+==============================*/
+
+#footer {
+  position: relative;
+  margin-top: -12vh;
+  /* negative value of footer height */
+  /*height: -12vh; Important! Must adjust margin-bottom of directly above element(s) to match height of footer.*/
+  background-color: rgba(53, 53, 53, 0.7);
+}
+
+h4 {
+  text-align: center;
+  font-family: Alice, sans-serif;
+  font-size: 38px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+ul#footer_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+
+#footer_menu i {
+  margin-top: 20px;
+  transform: scale(1.4);
+  transition: transform 0.7s ease;
+}
+
+#footer_menu i:hover {
+  transform: scale(1.9);
+}
+
+i[class~="fa-linkedin"] {
+  color: #0077b5;
+}
+
+i[class~="fa-facebook"] {
+  color: #3b5998;
+}
+
+i[class~="fa-github"] {
+  color: #000;
+}
+
+i[class~="fa-twitter"] {
+  color: #55acee;
+}
+
+/* ================================================================================
+======================== Styling for the .pdf file Modal ==========================
+=================================================================================*/
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  max-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  font-family: Alice, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  height: 88vh;
+  width: 88vw;
+  position: relative;
+  margin: 4% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+  background: #9f6b3f;
+}
+
+iframe {
+  height: 80vh;
+  width: 85vw;
+  border: none;
+  display: none;
+}
+
+h2 {
+  font-size: 1.1em;
+  margin: 5px;
+}
+
+/* ==============================================
+========== @media Responsive Styles =============
+===============================================*/
+
+@media only screen and (max-width: 600px) {
+  p.intro {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  p#contact_me {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  label {
+    font-size: 1.2rem;
+  }
+  #contact-area input,
+  #contact-area textarea {
+    font-size: 0.9rem;
+  }
+}
+
+/*  ===================================
+    @media Queries for Responsive Menu
+===================================== */
+
+/*Under 640px hamburger menu is visible only. When click add the .responsive class making menu items visible.*/
+
+@media only screen and (max-width: 640px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+  }
+  .divMenu {
+    max-width: 33.33%;
+    margin-left: 70vw;
+  }
+  ul.topnav.responsive {
+    margin-top: -75px;
+    margin-left: 70px;
+    width: 100px;
+  }
+  ul.topnav.responsive li:not(:first-child) {
+    display: block;
+    font-size: 0.6rem;
+    margin: 0;
+    text-align: right;
+  }
+  ul.topnav.responsive li a {
+    margin: 0;
+    padding: 2vh;
+    font-size: 0.7rem;
+  }
+  span#initials {
+    font-size: 1.2rem;
+    margin-left: -2vw;
+  }
+  .navName {
+    margin-top: -10vh;
+    width: 33.33%;
+    margin-left: 25vw;
+  }
+  nav .navName span {
+    font-size: 0.7rem;
+  }
+  pre {
+    font-size: 2rem;
+    margin-top: -15vh;
+  }
+  .tooltip-bottom:hover::after {
+    padding: 0;
+    margin-left: -10vw;
+  }
+}
+
+/* When the screen is between 641 and 925 pixels wide, hide all list items, except for the first one (".icon"). Show the list item that contains the link to open and close the topnav (li.icon) */
+
+@media screen and (min-width: 641px) and (max-width: 925px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.icon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+    font-size: 0.7em;
+    padding: 0;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: right;
+    padding: 0;
+  }
+  span#initials {
+    font-size: 1.9rem;
+    margin-left: -1vw;
+    padding-top: 20px;
+    display: inline;
+    /*        min-width: 35vw;*/
+  }
+  .tooltip-bottom:hover::after {
+    padding: 0;
+    margin-left: -5vw;
+  }
+}
