@@ -1,13 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>My Portfolio</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/tooltips.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alice|EB+Garamond|Frank+Ruhl+Libre" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,700italic,400italic,300,900" rel="stylesheet"
+    type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ============================================================
+       ======== Main Body Markup for Page  ========================
+       ============================================================    -->
+  <main>
+    <!-- ===========================================
+         ========== Markup for Navbar ==============
+         =========================================== -->
+
+    <nav class="fill">
+      <div class="initials">
+        <span class="tooltip-bottom" id="initials" data-tooltip="Click to see my Resume">
+          <a class="classInitials" href="#openModal">AK</a>
+        </span>
+      </div>
+      <div class="navName">
+        <span>A</span> <span>L</span> <span>A</span> <span>N</span>&nbsp;&nbsp;&nbsp;
+        <span>K</span> <span>I</span> <span>L</span> <span>L</span>
+        <span>I</span> <span>A</span> <span>N</span>
+      </div>
+      <div class="divMenu">
+        <ul id="myTopnav" class="topnav">
+          <li class="icon">
+            <a href="#"> <img src="img/menuFilled.png" alt="Menu" /> </a>
+          </li>
+          <li><a href="#contact-area">CONTACT</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#about">ABOUT</a></li>
+        </ul>
+      </div>
+
+    </nav>
+    <!-- End Flex group -->
+
+    <div class="row">
+      <div class="col-12">
+        <section id="about" role="region">
+          <p class="intro">
+            Hi. My name is Alan and I'm a Full Stack web developer. What do
+            I mean by that. To me, a Full Stack Developer is someone with
+            familiarity in each layer, if not mastery in many and a genuine
+            interest in all software technology. I have spent the last three
+            years learning and coding for my job as a Technology Consultant
+            in one of the most elite school districts in the country.
+          </p>
+          <p>
+            In that capacity I have set up and maintained a LAMP server for
+            the school to allow Teachers and Students to learn Web
+            Development in the classroom. Secondly, developed an Inventory
+            tracking system for the Highschool and also a Trouble Ticketing
+            application for Teachers and Staff to more easily contact us
+            with problems and be able to track their status. Also developed
+            a Test Quiz app for Teachers to quickly create quizzes. These
+            quizzes can then be administered online and stored in MySQL
+            database. I have also assisted Staff with training on different
+            Web technologies in the classroom.
+          </p>
+          <p>
+            I count in my skill set proficiency in HTML5, CSS, Javascript
+            and Vue. My back-end skills include PHP, NodeJS and MySQL. I
+            have also attained my Cisco certificate as a Network Associate.
+            This is gives me the ability to have the knowledge to understand
+            the whole picture. Good developers who are familiar with the
+            entire stack know how to make life easier for those around them.
+            This involves understanding what can break and why, taking no
+            resource for granted.
+          </p>
+        </section>
+      </div>
+    </div>
+    <hr class="hr_style" />
+
+    <!-- =============================================== -->
+    <!-- =========== Markup for Masonery layout ======== -->
+    <!-- =============================================== -->
+    <div class="grid-layout" id="portfolio">
+      <figure>
+        <img src="./img/coronavirus_landing_page.png" />
+        <figcaption>
+          <a href="#">Corona Virus Status Site</a>
+        </figcaption>
+      </figure>
+      <figure class="landscape">
+        <img src="./img/corona_virus_graph.png" />
+
+        <figcaption>
+          <a href="#">Corona Virus Status Site</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./img/gallery_page.jpg">
+
+        <figcaption>
+          <a href="#">Simple gallery</a>
+        </figcaption>
+      </figure>
+      <figure> 
+        <img src="./img/nasaplanets.png">
+
+        <figcaption>
+          <a href="#">NASA Image Gallery</a>
+        </figcaption>
+      </figure>
+      <figure class="landscape">
+        <img src="./img/modest_mouse_page.jpg">
+
+        <figcaption>
+          <a href="#">Modest Mouse Landing Page</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./img/chart_img.png" alt="Chart Web Site">
+
+        <figcaption>
+          <a href="#">Chart Maker Site6</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./img/movie_scoop_landing.jpg">
+
+        <figcaption>
+          <a href="#">Movie Fandom Site</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./img/black_panther_page.jpg" alt="Black Panther Movie">
+
+        <figcaption>
+          <a href="#">Movie results</a>
+        </figcaption>
+      </figure>
+
+      <figure class="landscape"> 
+        <img src="./img/sports_scores.jpg">
+
+        <figcaption>
+          <a href="#">Sports Scores</a>
+        </figcaption>
+      </figure>
+
+
+      <figure class="landscape"> 
+        <img src="./img/nasaplanetsII.png">
+
+        <figcaption>
+          <a href="#">NASA image query</a>
+        </figcaption>
+      </figure>
+      <figure> 
+        <img src="./img/tt_search.jpg" alt="Inventory CMS Site">
+
+        <figcaption>
+          <a href="#">Drupal CMS</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <hr class="hr_style" />
+    <!-- ========== Form Submit =================== -->
+    <section role="region" id="contact-area">
+      <h3>Contact Info</h3>
+      <div class="row">
+        <div class="col-4">
+          <form action="send_mail.php" method="post">
+            <label for="Name">Name:</label>
+            <input type="text" name="Name" id="Name" placeholder="From" required />
+
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="Email" placeholder="john@example.com" required />
+
+            <label for="Subject">Subject:</label>
+            <input type="text" name="Subject" id="Subject" required />
+
+            <label id="label_message" for="Message">Message:</label>
+            <textarea name="Message" id="Message" placeholder="Message Here" required></textarea>
+
+            <input type="submit" name="submit" value="Submit" class="submit-button" />
+          </form>
+        </div>
+        <div class="col-8">
+          <p id="contact_me">
+            If you would like to contact me please fill out the form and
+            submit. I would love to hear from you. Also if you are
+            interested in hiring me or if you have any Web Development
+            questions feel free to contact me.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========== Markup for Footer =======
+       ===================================== -->
+  <footer id="footer">
+    <h4 class="footer_header">Find Me on the Web</h4>
+    <ul id="footer_menu">
+      <li>
+        <a href="https://www.linkedin.com/in/akillian" target="_blank">
+          <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/alank90" target="_blank">
+          <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com" target="_blank">
+          <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/alan_k90" target="_blank">
+          <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- =================================================== -->
+  <!-- =========== End footer markup  ==================== -->
+
+  <!-- ===================================================
+      ========= Markup for the resume .pdf Modal  ========
+      ===src not set on load because mobile browsers =====
+      == will load frame even if hidden it seems     =====
+      ====================================================  -->
+
+  <div id="openModal" class="modal">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <h2>My Resume</h2>
+      <iframe id="iframeDisplay" src="#"> </iframe>
+    </div>
+  </div>
+
+  <!-- =================================================== -->
+  <!-- ============== Javascript Modules ================= -->
+  <script type="module" src="/index.js"></script>
+</body>
+
 </html>
