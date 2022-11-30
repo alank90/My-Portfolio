@@ -1,25 +1,36 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
-require('dotenv').config();
-const nodemailer = require('nodemailer');
+handler = async function (event, context) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Hello World" }),
+    };
+  };
+/* const nodemailer = require('nodemailer');
 
 const handler = async (event) => {
-    let transporter = nodemailer.createTransport({
+    let mailTransporter = nodemailer.createTransport({
         host: 'smtp.googlemail.com', // Gmail Host
         port: 465, // Port
-        secure: true, // this is true as port is 465
         auth: {
-            user: 'GMAIL_USERNAME', // username
-            pass: 'GMAIL_PASSWORD', // password
+            user: 'akillian@scarsdaleschools.org', // username
+            pass: '@Vivaldi', // password
         },
-    }); // send mail with defined transport object
-    let info = await transporter.sendMail({
-        from: '"FROM_NAME" <FROM_EMAIL_ADDRESS>', // sender address
-        to: 'RECEPIENT_EMAIL_ADDRESS', // list of receivers
-        subject: 'Welcome Email', // Subject line 
-        text: "Hello world?", // plain text body
-        html: 'This email is sent through <b>GMAIL SMTP SERVER</b>', // html body
     });
-    console.log('Message sent: %s', info.messageId);
-};
 
+    let mailDetails = {
+        from: 'xyz@gmail.com',
+        to: 'abc@gmail.com',
+        subject: 'Test mail',
+        text: 'Node.js testing mail for GeeksforGeeks',
+    };
+
+    // send mail with defined transport object
+    mailTransporter.sendMail(mailDetails, function (err, data) {
+        if (err) {
+            console.log('Error Occurs');
+        } else {
+            console.log('Email sent successfully');
+        }
+    });
+}; */
 export default { handler };

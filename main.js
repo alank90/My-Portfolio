@@ -6,7 +6,7 @@ import './css/main.css';
 
 // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
 document.getElementById('myTopnav').addEventListener('click', toggleResponsive);
-
+console.log(import.meta.env.VITE_GMAIL_DOMAIN);
 function toggleResponsive() {
     const x = document.getElementById('myTopnav');
     if (x.className === 'topnav') {
