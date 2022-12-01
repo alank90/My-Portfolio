@@ -185,15 +185,15 @@
       <h3>Contact Info</h3>
       <div class="row">
         <div class="col-4">
-          <form action="send_mail.php" method="post">
-            <label for="Name">Name:</label>
+          <form onsubmit="submitForm(event)">
+            <!-- <label for="Name">Name:</label>
             <input type="text" name="Name" id="Name" placeholder="From" required />
+ -->
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="john@example.com" required />
 
-            <label for="Email">Email:</label>
-            <input type="email" name="Email" id="Email" placeholder="john@example.com" required />
-
-            <label for="Subject">Subject:</label>
-            <input type="text" name="Subject" id="Subject" required />
+            <!-- <label for="Subject">Subject:</label>
+            <input type="text" name="Subject" id="Subject" required /> -->
 
             <label id="label_message" for="Message">Message:</label>
             <textarea name="Message" id="Message" placeholder="Message Here" required></textarea>
@@ -262,6 +262,25 @@
   <!-- =================================================== -->
   <!-- ============== Javascript Modules ================= -->
   <script type="module" src="/main.js"></script>
+
+  <script>
+    function submitForm(event) {
+      // Stop the browser's default behavior.
+      event.preventDefault();
+      // Retrieve data from the form.
+      const formData = new FormData(event.target);
+      const request = new XMLHttpRequest();
+      // Convert data to JSON object.
+      var jsonData = {};
+      formData.forEach((value, key) => (jsonData[key] = value));
+      // Send the data to the Netlify function.
+      request.open("POST", "/.netlify/functions/send-email");
+      request.send(JSON.stringify(jsonData));
+      // Clear the form.
+      alert("Email request submitted!");
+      event.target.reset();
+    }
+  </script>
 </body>
 
 </html>
