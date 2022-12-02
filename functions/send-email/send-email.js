@@ -4,30 +4,27 @@ const nodemailer = require('nodemailer');
 const handler = async (event, context, callback) => {
     // Parse the JSON text received.
     const body = JSON.parse(event.body);
+    console.log(`Event is: ${body.message}`);
+
     // Build an HTML string to represent the body of the email to be sent.
-    const html = `<div style="margin: 20px auto;">${body.body}</div>`;
-    // Generate test SMTP service account from ethereal.email. Only needed if you
-    // don't have a real mail account for testing
-    // let testAccount = await nodemailer.createTestAccount();
+    const html = `<div style="margin: 20px auto;">${body.message}</div>`;
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        host: 'smtp.gmail.com',
         auth: {
-            user: 'adaline.steuber22@ethereal.email', // generated ethereal user
-            pass: '1ytM8B1SWs5FkAhqMT', // generated ethereal password
+            user: 'akillian@scarsdaleschools.org', 
+            pass: 'ibekfjrqsacsqfeh', 
         },
     });
 
     try {
         // send mail with defined transport object
         let info = await transporter.sendMail({
-            from: '"☁️ The Cloud ☁️" <thecloud@example.com>',
-            to: body.email,
-            subject: 'New Form Submission',
-            text: body.body,
+            from: body.name,
+            to: 'akillian@outlook.com',
+            subject: body.subject,
+            text: body.message,
             html: html,
         });
         // Log the result
@@ -39,4 +36,4 @@ const handler = async (event, context, callback) => {
     }
 };
 
-module.exports = { handler };
+export { handler };
