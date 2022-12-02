@@ -14,7 +14,7 @@ const handler = async (event, context, callback) => {
         host: 'smtp.gmail.com',
         auth: {
             user: 'akillian@scarsdaleschools.org', 
-            pass: 'ibekfjrqsacsqfeh', 
+            pass: VITE_GMAIL_PASSWORD, 
         },
     });
 
