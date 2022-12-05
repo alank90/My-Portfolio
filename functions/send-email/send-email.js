@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const handler = async (event, context, callback) => {
     // Parse the JSON text received.
     const body = JSON.parse(event.body);
-    console.log(`Event is: ${body.message}`);
+    console.log('Password', process.env.SMTP_PASSWORD);
 
     // Build an HTML string to represent the body of the email to be sent.
     const html = `<div style="margin: 20px auto;">${body.message}</div>`;
@@ -12,9 +12,10 @@ const handler = async (event, context, callback) => {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
+        service: 'gmail',
         auth: {
-            user: 'akillian@scarsdaleschools.org', 
-            pass: VITE_GMAIL_PASSWORD, 
+            user: 'akillian@scarsdaleschools.org',
+            pass: process.env.SMTP_PASSWORD,
         },
     });
 
