@@ -1,12 +1,9 @@
-import './css/main.css';
-
 /*==============================================
 =========== Javascript for Responsive Menu ========
 =============================================== */
 
 // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
 document.getElementById('myTopnav').addEventListener('click', toggleResponsive);
-console.log(import.meta.env.VITE_GMAIL_DOMAIN);
 function toggleResponsive() {
     const x = document.getElementById('myTopnav');
     if (x.className === 'topnav') {
@@ -34,6 +31,14 @@ if (window.matchMedia('(max-width: 800px)').matches) {
     document.getElementById('initials').addEventListener(
         'click',
         function () {
+            const modalEl = document.querySelector('#openModal');
+            // Note here single "=" on if condition. Javascript is accessing your inline
+            // styles as defined with the element itself and not what you are defining
+            // with external CSS. So this statement: if(display == 'none') never
+            // returns true because display is actually set to "" initially.
+            if ((modalEl.style.display = 'none')) {
+                modalEl.style.display = 'block';
+            }
             // Make iFrame appear on click
             iframeElement = document.querySelector('#iframeDisplay');
             iframeElement.setAttribute('src', 'doc/resume.pdf');
@@ -56,3 +61,6 @@ if (window.matchMedia('(max-width: 800px)').matches) {
         false
     );
 }
+
+// ============== Invoke sendEmail() module ============== //
+//sendEmail();

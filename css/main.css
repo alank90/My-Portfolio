@@ -534,6 +534,7 @@ i[class~='fa-twitter'] {
 
 .modal {
     position: fixed;
+    display: none;
     height: 100vh;
     max-height: 100%;
     width: 100vw;
