@@ -64,7 +64,7 @@
             Hi. My name is Alan and I'm a Full Stack web developer. What do
             I mean by that. To me, a Full Stack Developer is someone with
             familiarity in each layer, if not mastery in many and a genuine
-            interest in all software technology. I have spent the last three
+            interest in all software technology. I have spent the last four
             years learning and coding for my job as a Technology Consultant
             in one of the most elite school districts in the country.
           </p>
@@ -74,10 +74,9 @@
             Development in the classroom. Secondly, developed an Inventory
             tracking system for the Highschool and also a Trouble Ticketing
             application for Teachers and Staff to more easily contact us
-            with problems and be able to track their status. Also developed
-            a Test Quiz app for Teachers to quickly create quizzes. These
-            quizzes can then be administered online and stored in MySQL
-            database. I have also assisted Staff with training on different
+            with problems and be able to track their status. On the front end I have
+            developed web apps using both plain vanilla javascript and frameworks like
+            Vue to create SPA's. Lastly, have also assisted Staff with training on different
             Web technologies in the classroom.
           </p>
           <p>
@@ -264,6 +263,10 @@
   <!-- ============== Javascript Modules ================= -->
   <script type="module" src="/main.js"></script>
 
+  <!-- This is an antipattern. We should have gone with an event listener on the subm
+       submit button but then the native form validation features would not have
+       worked necessitating form validation in javascript. For a simple project like 
+       this I made the decision to keep native validation. -->
   <script>
     function sendEmail(event) {
       // Stop the browser's default behavior.
