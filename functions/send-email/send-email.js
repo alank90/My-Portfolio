@@ -6,20 +6,23 @@ const handler = async (event, context, callback) => {
     const body = JSON.parse(event.body);
 
     // Build an HTML string to represent the body of the email to be sent.
-    const html = `<div style="margin: 20px auto;">${body.message}</div>`;
+    const html = `<div style="margin: 20px auto;">Message Info:
+     ${body.name} <${body.email}>,
+     ${body.message}
+     </div>`;
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+        host: process.env.SMTP_SERVER_NAME,
         auth: {
-            user: 'akillian@scarsdaleschools.org',
+            user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASSWORD,
         },
     });
-    console.log("Body Object is: ", body);
+    console.log('Body Object is: ', body);
     const mailOptions = {
-        from: body.email,
-        to: 'akillian@outlook.com',
+        from: body.name,
+        to: "akillian@outlook.com",
         subject: body.subject,
         text: body.message,
         html: html,

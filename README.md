@@ -12,4 +12,5 @@ _Requirements for project_
 </li>
 <li>Add an app to your gmail account</li>
 <li>Set an environment variable in netlify site settings for gmail app password.Remember to run ntl link locally to link it to local dev environment</li>
+<li>Deploy to Netlify and create a functions directory to put your serverless function in.</li>
 </ul>

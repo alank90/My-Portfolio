@@ -61,6 +61,3 @@ if (window.matchMedia('(max-width: 800px)').matches) {
         false
     );
 }
-
-// ============== Invoke sendEmail() module ============== //
-//sendEmail();

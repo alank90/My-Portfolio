@@ -39,7 +39,7 @@
         </span>
       </div>
       <div class="navName">
-        <span>A</span> <span>L</span> <span>A</span> <span>N</span>&nbsp;&nbsp;&nbsp;
+        <span>A</span> <span>L</span> <span>A</span> <span>N</span><span> </span>
         <span>K</span> <span>I</span> <span>L</span> <span>L</span>
         <span>I</span> <span>A</span> <span>N</span>
       </div>
@@ -122,7 +122,7 @@
         <img src="./img/nasaplanets.png">
 
         <figcaption>
-          <a href="#">NASA Image Gallery</a>
+          <a href="http://nasaplanets.surge.sh/">NASA Image Gallery</a>
         </figcaption>
       </figure>
       <figure class="landscape">
@@ -136,21 +136,21 @@
         <img src="./img/chart_img.png" alt="Chart Web Site">
 
         <figcaption>
-          <a href="#">Chart Maker Site6</a>
+          <a href="#">Chart Maker Site</a>
         </figcaption>
       </figure>
       <figure>
         <img src="./img/movie_scoop_landing.jpg">
 
         <figcaption>
-          <a href="#">Movie Fandom Site</a>
+          <a href="https://moviescoop.surge.sh/">Movie Fandom Site</a>
         </figcaption>
       </figure>
       <figure>
         <img src="./img/black_panther_page.jpg" alt="Black Panther Movie">
 
         <figcaption>
-          <a href="#">Movie results</a>
+          <a href="https://moviescoop.surge.sh/">Movie results</a>
         </figcaption>
       </figure>
 
@@ -167,7 +167,7 @@
         <img src="./img/nasaplanetsII.png">
 
         <figcaption>
-          <a href="#">NASA image query</a>
+          <a href="http://nasaplanets.surge.sh/">NASA image query</a>
         </figcaption>
       </figure>
       <figure> 
@@ -180,7 +180,11 @@
     </div>
 
     <hr class="hr_style" />
-    <!-- ========== Form Submit =================== -->
+
+    <!-- =================================================== -->
+    <!-- ========== Form Submit ============================ -->
+    <!-- =================================================== -->
+
     <section role="region" id="contact-area">
       <h3>Contact Info</h3>
       <div class="row">
@@ -211,11 +215,15 @@
         </div>
       </div>
     </section>
-
+    <!-- =================================================== -->
+    <!-- =========== End Form submit ======================= -->
+    <!-- =================================================== -->
   </main>
 
-  <!-- =========== Markup for Footer =======
-       ===================================== -->
+  <!-- =================================================== -->
+  <!-- =========== Markup for Footer ===================== -->
+  <!-- =================================================== -->
+
   <footer id="footer">
     <h4 class="footer_header">Find Me on the Web</h4>
     <ul id="footer_menu">
@@ -244,6 +252,8 @@
 
   <!-- =================================================== -->
   <!-- =========== End footer markup  ==================== -->
+  <!-- =================================================== -->
+
 
   <!-- ===================================================
       ========= Markup for the resume .pdf Modal  ========
@@ -261,12 +271,14 @@
 
   <!-- =================================================== -->
   <!-- ============== Javascript Modules ================= -->
+  <!-- =================================================== -->
+
   <script type="module" src="/main.js"></script>
 
-  <!-- This is an antipattern. We should have gone with an event listener on the subm
+  <!-- This is an antipattern. We should have gone with an event listener on the
        submit button but then the native form validation features would not have
-       worked necessitating form validation in javascript. For a simple project like 
-       this I made the decision to keep native validation. -->
+       worked, necessitating form validation in javascript. For a simple project like 
+       this I made the decision to keep native validation. ====================== -->
   <script>
     function sendEmail(event) {
       // Stop the browser's default behavior.
