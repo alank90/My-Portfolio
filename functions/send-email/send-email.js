@@ -7,7 +7,7 @@ const handler = async (event, context, callback) => {
 
     // Build an HTML string to represent the body of the email to be sent.
     const html = `<div style="margin: 20px auto;">Message Info:
-     ${body.name} <${body.email}>,
+     ${body.name} ${body.email}, </br>
      ${body.message}
      </div>`;
 
@@ -19,11 +19,11 @@ const handler = async (event, context, callback) => {
             pass: process.env.SMTP_PASSWORD,
         },
     });
-    console.log('Body Object is: ', body);
     const mailOptions = {
         from: body.name,
-        to: "akillian@outlook.com",
-        subject: body.subject,
+        replyTo: `${body.name} <${body.email}>`,
+        to: 'akillian@outlook.com',
+        subject: `${body.subject} (Sent from: ${body.name})`,
         text: body.message,
         html: html,
     };
