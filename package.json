@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "eslint-config-prettier": "^8.5.0",
-    "netlify-cli": "^12.2.10",
+    "netlify-cli": "^12.2.11",
     "nodemailer": "^6.8.0"
   }
 }
