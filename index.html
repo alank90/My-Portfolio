@@ -8,13 +8,14 @@
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="icon" href="./apple-touch-icon.png" />
   <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" href="./favicon.jpg">
 
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/tooltips.css" />
-  <!-- <link rel="stylesheet" href="css/main.css" /> -->
+  <link rel="stylesheet" href="css/main.css" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css?family=Alice|EB+Garamond|Frank+Ruhl+Libre" rel="stylesheet"
     type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,700italic,400italic,300,900" rel="stylesheet"
@@ -38,7 +39,7 @@
         </span>
       </div>
       <div class="navName">
-        <span>A</span> <span>L</span> <span>A</span> <span>N</span>&nbsp;&nbsp;&nbsp;
+        <span>A</span> <span>L</span> <span>A</span> <span>N</span><span> </span>
         <span>K</span> <span>I</span> <span>L</span> <span>L</span>
         <span>I</span> <span>A</span> <span>N</span>
       </div>
@@ -63,7 +64,7 @@
             Hi. My name is Alan and I'm a Full Stack web developer. What do
             I mean by that. To me, a Full Stack Developer is someone with
             familiarity in each layer, if not mastery in many and a genuine
-            interest in all software technology. I have spent the last three
+            interest in all software technology. I have spent the last four
             years learning and coding for my job as a Technology Consultant
             in one of the most elite school districts in the country.
           </p>
@@ -73,10 +74,9 @@
             Development in the classroom. Secondly, developed an Inventory
             tracking system for the Highschool and also a Trouble Ticketing
             application for Teachers and Staff to more easily contact us
-            with problems and be able to track their status. Also developed
-            a Test Quiz app for Teachers to quickly create quizzes. These
-            quizzes can then be administered online and stored in MySQL
-            database. I have also assisted Staff with training on different
+            with problems and be able to track their status. On the front end I have
+            developed web apps using both plain vanilla javascript and frameworks like
+            Vue to create SPA's. Lastly, have also assisted Staff with training on different
             Web technologies in the classroom.
           </p>
           <p>
@@ -122,7 +122,7 @@
         <img src="./img/nasaplanets.png">
 
         <figcaption>
-          <a href="#">NASA Image Gallery</a>
+          <a href="http://nasaplanets.surge.sh/">NASA Image Gallery</a>
         </figcaption>
       </figure>
       <figure class="landscape">
@@ -136,21 +136,21 @@
         <img src="./img/chart_img.png" alt="Chart Web Site">
 
         <figcaption>
-          <a href="#">Chart Maker Site6</a>
+          <a href="#">Chart Maker Site</a>
         </figcaption>
       </figure>
       <figure>
         <img src="./img/movie_scoop_landing.jpg">
 
         <figcaption>
-          <a href="#">Movie Fandom Site</a>
+          <a href="https://moviescoop.surge.sh/">Movie Fandom Site</a>
         </figcaption>
       </figure>
       <figure>
         <img src="./img/black_panther_page.jpg" alt="Black Panther Movie">
 
         <figcaption>
-          <a href="#">Movie results</a>
+          <a href="https://moviescoop.surge.sh/">Movie results</a>
         </figcaption>
       </figure>
 
@@ -167,7 +167,7 @@
         <img src="./img/nasaplanetsII.png">
 
         <figcaption>
-          <a href="#">NASA image query</a>
+          <a href="http://nasaplanets.surge.sh/">NASA image query</a>
         </figcaption>
       </figure>
       <figure> 
@@ -180,29 +180,33 @@
     </div>
 
     <hr class="hr_style" />
-    <!-- ========== Form Submit =================== -->
+
+    <!-- =================================================== -->
+    <!-- ========== Form Submit ============================ -->
+    <!-- =================================================== -->
+
     <section role="region" id="contact-area">
       <h3>Contact Info</h3>
       <div class="row">
         <div class="col-4">
-          <form action="send_mail.php" method="post">
-            <label for="Name">Name:</label>
-            <input type="text" name="Name" id="Name" placeholder="From" required />
+          <form class="formEl" onsubmit="sendEmail(event)">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="From" required />
 
-            <label for="Email">Email:</label>
-            <input type="email" name="Email" id="Email" placeholder="john@example.com" required />
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="john@example.com" required />
 
-            <label for="Subject">Subject:</label>
-            <input type="text" name="Subject" id="Subject" required />
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject" required />
 
-            <label id="label_message" for="Message">Message:</label>
-            <textarea name="Message" id="Message" placeholder="Message Here" required></textarea>
+            <label id="label_message" for="message">Message:</label>
+            <textarea name="message" id="message" placeholder="Message Here" required></textarea>
 
             <input type="submit" name="submit" value="Submit" class="submit-button" />
           </form>
         </div>
         <div class="col-8">
-          <p id="contact_me">
+          <p id="contact_me" class="intro">
             If you would like to contact me please fill out the form and
             submit. I would love to hear from you. Also if you are
             interested in hiring me or if you have any Web Development
@@ -211,11 +215,15 @@
         </div>
       </div>
     </section>
-
+    <!-- =================================================== -->
+    <!-- =========== End Form submit ======================= -->
+    <!-- =================================================== -->
   </main>
 
-  <!-- =========== Markup for Footer =======
-       ===================================== -->
+  <!-- =================================================== -->
+  <!-- =========== Markup for Footer ===================== -->
+  <!-- =================================================== -->
+
   <footer id="footer">
     <h4 class="footer_header">Find Me on the Web</h4>
     <ul id="footer_menu">
@@ -244,6 +252,8 @@
 
   <!-- =================================================== -->
   <!-- =========== End footer markup  ==================== -->
+  <!-- =================================================== -->
+
 
   <!-- ===================================================
       ========= Markup for the resume .pdf Modal  ========
@@ -261,7 +271,35 @@
 
   <!-- =================================================== -->
   <!-- ============== Javascript Modules ================= -->
+  <!-- =================================================== -->
+
   <script type="module" src="/main.js"></script>
+
+  <!-- This is an antipattern. We should have gone with an event listener on the
+       submit button but then the native form validation features would not have
+       worked, necessitating form validation in javascript. For a simple project like 
+       this I made the decision to keep native validation. ====================== -->
+  <script>
+    function sendEmail(event) {
+      // Stop the browser's default behavior.
+      event.preventDefault();
+
+      // Retrieve data from the form.
+      const formData = new FormData(event.currentTarget);
+      const request = new XMLHttpRequest();
+      // Convert data to JSON object.
+      const jsonData = {};
+      formData.forEach((value, key) => (jsonData[key] = value));
+      // Send the data to the Netlify function.
+      request.open('POST', '/.netlify/functions/send-email');
+      request.send(JSON.stringify(jsonData));
+      // Clear the form.
+      alert('Email sent. Thanks for the interest.');
+      event.currentTarget.reset();
+    }
+  </script>
+
+
 </body>
 
 </html>

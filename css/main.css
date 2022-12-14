@@ -114,20 +114,12 @@ ul.topnav li a {
     font-weight: 600;
 }
 
-/* Change background color of links on hover
-ul.topnav li:not(:first-child) a:hover {
-    background-color: #9f6b3f;
-}*/
-
 .divMenu {
     margin: 55px 15px;
 }
 
 #myTopNav {
     display: flex;
-    /* flex-direction: column;
-  justify-content: flex-end;
-  align-content: flex-end; */
     margin: 45px 10px;
 }
 
@@ -277,11 +269,9 @@ p.intro {
 p.intro:first-child:first-letter {
     float: left;
     color: #9f6b3f;
-    font-size: 75px;
+    font-size: 4rem;
     line-height: 60px;
-    padding-top: 4px;
-    padding-right: 0px;
-    padding-left: 3px;
+    padding: 4px 0 0 3px;
     font-family: Georgia;
 }
 
@@ -301,10 +291,8 @@ main {
 }
 
 hr.hr_style {
-    border-style: solid;
-    border-color: #9f6b3f;
-    border-width: 3px 0 0 0;
-    border-radius: 20px;
+    background: linear-gradient(to right, rgb(191, 134, 218), rgb(219, 173, 35));
+    height: 2.5px;
 }
 
 hr.hr_style:before {
@@ -313,9 +301,8 @@ hr.hr_style:before {
     height: 30px;
     margin-top: -31px;
     border-style: solid;
-    border-color: #9f6b3f;
-    border-width: 0 0 3px 0;
-    border-radius: 20px;
+    background: linear-gradient(to right, rgb(205, 163, 224), rgb(219, 173, 35));
+    height: 5px;
 }
 
 span {
@@ -381,6 +368,11 @@ figure a:visited {
     cursor: default;
 }
 
+figure a[href="http://nasaplanets.surge.sh/"], figure a[href="https://moviescoop.surge.sh/"]
+{
+    cursor: pointer;
+}
+
 figcaption {
     grid-row: 2;
     grid-column: 1;
@@ -392,7 +384,6 @@ figcaption {
 /* ========= End Masonry Stylings ====================== */
 
 /* ==== Styling for the Contact and Form area  ============== */
-
 #contact-area {
     margin-bottom: 25px;
 }
@@ -403,62 +394,60 @@ figcaption {
     width: 100%;
     font-family: Alice, sans-serif;
     font-size: 1.4em;
-    background-color: #d3d3c1;
+    background-color: #efe9f1;
     margin: 0px 0px 10px 0px;
-    border: 2px solid #ccc;
+    border: 2px solid rgb(188, 148, 240);
 }
 
 #contact-area textarea:focus,
 #contact-area input:focus {
-    border: 2px solid #9f6b3f;
+    border: 2px solid #ba35d8bd;
+}
+
+/* Button CSS */
+#contact-area input.submit-button {
+    align-items: center;
+    width: 8rem;
+    background-color: initial;
+    background-image: linear-gradient(
+        rgba(135, 132, 137, 0.84),
+        rgba(22, 11, 37, 0.84) 50%
+    );
+    border-radius: 42px;
+    border-width: 0;
+    box-shadow: rgba(112, 59, 180, 0.24) 0 2px 2px,
+        rgba(179, 132, 201, 0.4) 0 8px 12px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    font-family: Quicksand, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    margin: 0;
+    padding: 18px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+        rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+        rgba(57, 31, 91, 0.32) 4px 4px 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
 }
 
 #contact-area input.submit-button:hover {
-    background: #9e5b24;
-    /* Old browsers */
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #9e5b24 0%, #995423 66%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(#9e5b24),
-        color-stop(66%, #995423)
-    );
-    background: -o-linear-gradient(top, #9e5b24 0%, #995423 66%);
-    background: linear-gradient(to bottom, #9e5b24 0%, #995423 66%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#9e5b24', endColorstr='#995423', GradientType=0);
-    /* IE6-9 */
+    background-image: linear-gradient(#8f8a91, #14092a 50%);
 }
 
-#contact-area input:focus {
-    border: 2px solid #9f6b3f;
-}
-
-#contact-area input.submit-button {
-    border: 2px solid black;
-    border-radius: 25px;
-    width: auto;
-    margin-top: 10px;
-    background: #9f6b3f;
-    /* Old browsers */
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #eab92d 0%, #9f6b3f 87%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(#eab92d),
-        color-stop(87%, #9f6b3f)
-    );
-    background: -o-linear-gradient(top, #eab92d 0%, #9f6b3f 87%);
-    background: linear-gradient(to bottom, #eab92d 0%, #9f6b3f 87%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#9f6b3f', GradientType=0);
-    /* IE6-9 */
+@media (min-width: 768px) {
+    .button-72 {
+        font-size: 21px;
+        padding: 18px 34px;
+    }
 }
 
 #contact_me {
@@ -485,6 +474,12 @@ label {
     /* negative value of footer height */
     /*height: -12vh; Important! Must adjust margin-bottom of directly above element(s) to match height of footer.*/
     background-color: rgba(53, 53, 53, 0.7);
+}
+#contact-area > h3 {
+    font-size: 1.6em;
+    margin: 5px;
+    color: rgb(217, 196, 241);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
 }
 
 h4 {
@@ -534,6 +529,7 @@ i[class~='fa-twitter'] {
 
 .modal {
     position: fixed;
+    display: none;
     height: 100vh;
     max-height: 100%;
     width: 100vw;
