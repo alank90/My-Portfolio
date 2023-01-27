@@ -291,7 +291,11 @@ main {
 }
 
 hr.hr_style {
-    background: linear-gradient(to right, rgb(191, 134, 218), rgb(219, 173, 35));
+    background: linear-gradient(
+        to right,
+        rgb(191, 134, 218),
+        rgb(219, 173, 35)
+    );
     height: 2.5px;
 }
 
@@ -301,7 +305,11 @@ hr.hr_style:before {
     height: 30px;
     margin-top: -31px;
     border-style: solid;
-    background: linear-gradient(to right, rgb(205, 163, 224), rgb(219, 173, 35));
+    background: linear-gradient(
+        to right,
+        rgb(205, 163, 224),
+        rgb(219, 173, 35)
+    );
     height: 5px;
 }
 
@@ -368,7 +376,7 @@ figure a:visited {
     cursor: default;
 }
 
-figure a[href="http://nasaplanets.surge.sh/"], figure a[href="https://moviescoop.surge.sh/"]
+figure a[href="http://nasaplanets.surge.sh/"], figure a[href="https://moviescoop.surge.sh/"],figure a[href="https://csta.netlify.app"]
 {
     cursor: pointer;
 }
