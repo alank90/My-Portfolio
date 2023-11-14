@@ -1,1 +1,1 @@
-module.exports = require('./src/functions/send-email/send-email.js')
+module.exports = require('./functions/send-email/send-email.js')

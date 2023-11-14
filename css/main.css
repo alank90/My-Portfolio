@@ -373,7 +373,7 @@ figure a,
 figure a:visited {
     color: black;
     text-decoration: none;
-    cursor: default;
+    cursor: pointer;
 }
 
 figure a[href="http://nasaplanets.surge.sh/"], figure a[href="https://moviescoop.surge.sh/"],figure a[href="https://csta.netlify.app"]
